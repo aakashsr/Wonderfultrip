@@ -1,0 +1,339 @@
+.destinations {
+    position: relative;
+    background-size: cover;
+    z-index: -2;
+    padding: 5rem 10rem;
+    margin-bottom: 2rem;
+    height: 135vh;
+
+    @include respond(tab-land) {
+        height: 160vh;
+    }
+
+    @include respond(tab-port) {
+        padding: 0 2rem;
+        height: 135vh;
+    }
+
+    @include respond(phone) {
+        padding: 0 2rem;
+        height: 240vh;
+
+    }
+
+    &__heading {
+        &::before {
+            content: "Destinations";
+        }
+    }
+
+    &__span {
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        margin: 0 auto 15px;
+        display: block;
+
+    }
+
+    &__connector {
+        background: #E83D60;
+        width: 4px;
+        height: 5rem;
+        display: inline-block;
+        position: absolute;
+        top: 92%;
+        left: 5%;
+
+        @include respond(phone) {
+            top: 90%;
+            left: 8%;
+        }
+
+        &--2 {
+            top: 94%;
+
+            @include respond(tab-land) {
+                top: 92%;
+            }
+
+            @include respond(phone) {
+                top: 90%;
+            }
+
+
+        }
+
+
+        &--5 {
+            top: 90%;
+
+            @include respond(tab-land) {
+                top: 92%;
+            }
+
+            @include respond(phone) {
+                top: 90%;
+            }
+        }
+    }
+
+
+    &__info {
+        position: absolute;
+        z-index: 9;
+        top: 108%;
+        left: 0;
+
+        @include respond(phone) {
+            top: 110%;
+            left: 5%;
+        }
+
+        &--2 {
+            top: 105%;
+
+            @include respond(tab-land) {
+                top: 108%;
+            }
+
+            @include respond(phone) {
+                top: 110%;
+            }
+
+        }
+
+        &--5 {
+            top: 110%;
+
+            @include respond(tab-land) {
+                top: 108%;
+            }
+
+            @include respond(phone) {
+                top: 110%;
+            }
+        }
+    }
+
+
+    &__place {
+        font-family: "Poppins",
+            sans-serif;
+        display: inline-block;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #341a79;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+}
+
+
+.gallery {
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+    max-width: 120rem;
+    margin: 0 auto;
+
+    @include respond(tab-land) {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        max-width: 100rem;
+    }
+
+
+    @include respond(tab-port) {
+        grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+        max-width: 740px;
+    }
+
+    @include respond(phone) {
+        grid-gap: 3rem;
+    }
+
+    &__item {
+        position: relative;
+
+        @include respond(tab-land) {
+            max-width: 60rem;
+            margin: 0 auto;
+        }
+
+
+        @include respond(tab-land) {
+            margin-top: 5rem !important;
+            height: 32vh !important;
+        }
+
+        @include respond(tab-port) {
+
+            margin: 0 auto;
+            height: 27vh !important;
+        }
+
+        @include respond(phone) {
+            width: 80%;
+            margin: 0 auto;
+            height: 27vh !important;
+        }
+
+        &--5 {
+            margin-top: 3rem;
+
+            @include respond(phone) {
+                margin-top: 0;
+            }
+        }
+
+        &--4 {
+            margin-top: -8rem;
+
+            @include respond(phone) {
+                margin-top: 0;
+            }
+
+        }
+
+        &--6 {
+            margin-top: -8rem;
+
+            @include respond(phone) {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+
+//   .card:hover .card__side--front {
+//       transform: rotateY(-180deg);
+//   }
+
+
+//   .card:hover .card__side--back {
+//       transform: rotateY(0);
+//   }
+
+
+
+.card {
+    position: relative;
+    perspective: 150rem;
+
+    &__side--front {
+        background-color: $color-white;
+        transition: all .5s ease;
+        backface-visibility: hidden;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        border-radius: 3px;
+    }
+
+
+    &__side--back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        background-color: orangered;
+        transform: rotateY(180deg);
+        width: 100%;
+        height: 100%;
+        transition: all .5s ease;
+    }
+}
+
+
+
+.card:hover figure{
+    transform: rotateY(-180deg);
+    color: yellow!important;
+}
+
+
+.card:hover div {
+    transform: rotateY(0);
+}
+
+
+// .card__side--front {
+//     background-color: $color-white;
+// }
+
+// .card__side--back {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     backface-visibility: hidden;
+//     background-color: green;
+//     transform: rotateY(180deg);
+//     width: 100%;
+//     height: 100%;
+// }
+
+// &-1 {
+//     background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
+// }
+
+// &-2 {
+//     background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary-dark);
+// }
+
+// &-3 {
+//     background-image: linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark);
+// }
+
+
+
+
+.gallery__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.gallery__link:hover .gallery__img {
+    transform: scale(1.2);
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include respond(phone) {
+        width: 100%;
+    }
+}
+
+.gallery__item--1 {
+    height: 42vh;
+}
+
+.gallery__item--2 {
+    height: 56vh;
+}
+
+.gallery__item--3 {
+    height: 42vh;
+}
+
+.gallery__item--4 {
+    height: 42vh;
+    margin-top: -8rem;
+}
+
+.gallery__item--5 {
+    height: 32vh;
+}
+
+.gallery__item--6 {
+    height: 42vh;
+    margin-top: -8rem;
+}

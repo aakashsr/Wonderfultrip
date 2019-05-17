@@ -1,0 +1,41 @@
+.texture-handler {
+    position: absolute;
+    left: 200px;
+    right: 200px;
+    display: block;
+    height: 24px;
+
+    &__top {
+
+        top: 0;
+    }
+
+    &__bottom {
+        bottom: 0;
+    }
+}
+
+.texture {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 24px;
+    max-width: 1000px;
+    width: 100%;
+    z-index: 500;
+
+    &__top {
+        background: url(../../img/texture-top.png) no-repeat top right;
+        -webkit-background-size: 100% auto;
+        background-size: 100% auto;
+    }
+
+    &__bottom {
+        background: url(../../img/texture-bottom.png) no-repeat bottom left;
+        -webkit-background-size: 100% auto;
+        background-size: 100% auto;
+    }
+}

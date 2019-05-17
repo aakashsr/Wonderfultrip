@@ -1,0 +1,159 @@
+.services {
+    padding-top: 8rem;
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 91%, 47% 100%, 0 91%);
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 47% 100%, 0 91%);
+    margin-bottom: 5rem;
+
+    &__heading {
+        &::before {
+            content: "Why Us";
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 130rem;
+        margin: 0 auto;
+
+        @include respond(tab-land) {
+            max-width: 95%;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        @include respond(phone) {
+            max-width: 70rem;
+        }
+    }
+
+    &__img {
+        max-width: 65%;
+
+        @include respond(tab-land) {
+            max-width: 75%;
+        }
+
+         @include respond(tab-port) {
+             max-width: 55%;
+         }
+
+        @include respond(phone) {
+            max-width: 70%;  
+        }
+
+    }
+
+    &__items {
+        display: flex;
+
+        max-width: 30%;
+        align-items: center;
+        justify-content: center;
+        height: 15rem;
+        box-shadow: 3px 15px 30px rgba(0, 0, 0, 0.15);
+        transition: ease .3s;
+        border-bottom: 3px solid #341a79;
+
+        @include respond(tab-port) {
+            max-width: 70%;
+            height: 17rem;
+            margin: 2rem auto;
+        }
+
+        @include respond(phone) {
+            max-width: 75%;
+        }
+
+
+
+
+
+        &:hover {
+
+            box-shadow: 3px 15px 30px rgba(157, 110, 110, 0.15);
+        }
+
+        &--img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 30%;
+            margin-right: 1.5rem;
+            height: 100%;
+            padding: 0 1rem;
+        }
+
+        &--content {
+            flex-basis: 70%;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1rem;
+        }
+
+        &--paragraph {
+            line-height: 1.4;
+            margin-bottom: 0;
+
+            @include respond(tab-port) {
+                font-size: 1.8rem;
+            }
+
+            @include respond(phone) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &--heading {
+            margin-top: 0 !important;
+            margin-bottom: 15px;
+            text-align: center;
+
+            @include respond(tab-port) {
+                font-size: 2.3rem;
+            }
+
+            @include respond(phone) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+//   &__items:hover{
+//     border: 2px 2px 2px 2px solid #341a79;
+// }
+
+
+
+
+
+.section-about {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    // margin-top: -20vh;
+
+    @include respond(tab-port) {
+        padding: 20rem 0;
+    }
+
+}
+
+
+.section-stories {
+    position: relative;
+    padding: 15rem 0;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+
+}

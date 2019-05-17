@@ -1,0 +1,94 @@
+// .middle {
+//     width: 100%;
+// }
+
+// .counting-sec {
+//     padding: 40px 0;
+//     width: 100%;
+//     background: linear-gradient(90deg, #3c6382, #82ccdd);
+// }
+
+// .inner-width {
+//     max-width: 1200px;
+//     margin: auto;
+//     display: flex;
+// }
+
+// .col {
+//     flex: 1;
+//     text-align: center;
+//     padding: 20px;
+//     color: #fff;
+//     text-transform: uppercase;
+// }
+
+// .col i {
+//     font-size: 40px;
+//     color: #333;
+// }
+
+// .num {
+//     font-size: 40px;
+//     margin: 20px 0;
+// }
+
+
+.counter-section{
+    background:#fff;
+    padding: 8rem 0;
+    background: url(../img/watermarks2.png);
+    // background-position: center center;
+    background-size: cover;
+
+     @include respond(phone) {
+         padding: 5rem 0;
+     }
+}
+
+// .icon-box{
+//     border: 1px solid #E83D60;
+//     height: 100px;
+//     width: 100px;
+//     margin: 3rem auto;
+//     transform: rotate(45deg);
+//     color: #333;
+// }
+
+.icon{
+    font-size: 4rem;
+    margin:2.5rem auto;
+    color:#E83D60;
+    // transform:rotate(-45deg);
+
+    @include respond(phone){
+        font-size:3rem;
+         margin:1.5rem auto;
+    }
+}
+
+.counter-box{
+    font-size:2rem;
+    width:21%;
+
+    @include respond(phone) {
+        margin-bottom: 3rem!important;
+    }
+}
+
+.counter{
+    font-family:"Nunito",sans-serif;
+    font-weight: 600;
+    font-size:4rem;
+    color:#333;
+
+         @include respond(phone) {
+             font-size: 2.5rem;
+         }
+
+
+    &__text{
+         font-family:'Nunito',sans-serif;
+         color:#333;
+         text-transform:capitalize;
+    }
+}
